@@ -3,11 +3,23 @@ body {
     background-image: url(Photos/Background-image.jpg);
 }
 
-.container {
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title>img{
+    height: 90px;
+    width: auto;
+    margin-top: 20px;
+}
+
+.container-box {
     display: grid;
     grid-template-columns: auto auto auto;
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
     background-color: #e0347f;
     padding: 10px;
     border-radius: 10px;
@@ -22,8 +34,8 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #FFAFCC;
-    width: 143px;
-    height: 143px;
+    width: 125px;
+    height: 125px;
     margin: 3px;
     border-radius: 20px;
     font-size: 60px;

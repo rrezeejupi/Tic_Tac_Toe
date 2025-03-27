@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 450px;
+    height: 450px;
+    background-color: #E55E99;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFAFCC;
+    width: calc(500px * 33%);
+    height: calc(500px * 33%);
+    margin: 3px;
+    border-radius: 20px;
+}
+

@@ -1,11 +1,12 @@
 let isXturn = true;
 let isXturnImg = true;
 let winner = null;
+const turnImg = document.querySelector(".turn img");
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
     const boxes = this.querySelectorAll(".box");
-    const turnImg = document.querySelector(".turn img");
 
 
 
@@ -112,11 +113,10 @@ function closeFn() {
             box.innerHTML = "";  // This clears all child nodes inside the box, including images
         });
 
-
         isXturn = true;
         isXturnImg = true;
         turnImg.src = "Photos/Xs-turn.png";
 
-    };
+};
 
 

@@ -1,59 +1,126 @@
-body {
-    font-family: "Outfit", sans-serif;
-    background-image: url(Photos/Background-image.jpg);
-}
+    body {
+        font-family: "Outfit", sans-serif;
+        background-image: url(Photos/Background-image.jpg);
+    }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-.title>img{
-    height: 90px;
-    width: auto;
-    margin-top: 20px;
-}
+    .title>img{
+        height: 90px;
+        width: auto;
+        margin-top: 20px;
+    }
 
-.container-box {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    width: 400px;
-    height: 400px;
-    background-color: #e0347f;
-    padding: 10px;
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FFAFCC;
-    width: 125px;
-    height: 125px;
-    margin: 3px;
-    border-radius: 20px;
-    font-size: 60px;
-    color: #FAF9F6;
-}
-.turn {
-    position: absolute;
-    bottom: 10%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
+    .container-box {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 400px;
+        height: 400px;
+        background-color: #e0347f;
+        padding: 10px;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFAFCC;
+        width: 125px;
+        height: 125px;
+        margin: 3px;
+        border-radius: 20px;
+        font-size: 60px;
+        color: #FAF9F6;
+    }
+    .turn {
+        position: absolute;
+        bottom: 10%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 
-.turn>img{
-    height: 50px;
-    width: auto;
-    margin-top: 20px;
-}
+    .turn>img{
+        height: 50px;
+        width: auto;
+        margin-top: 20px;
+    }
 
+    .popup>img{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Moves content to the bottom */
+        position: fixed;
+        z-index: 1000;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        height: 350px;
+        width: auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .hide{
+        display: none;
+    }
+   
+    .close-btn{
+        position: absolute;
+        border: none;
+        bottom: 35%;  
+        left: 50%;
+        transform: translateX(-50%);
+        background: none;
+        font-size: 25px;
+        cursor: pointer;
+        color: #333;
+        z-index: 1001;
+    }
+
+    .close-btn>img {
+        position: absolute;
+        border: none;
+        bottom: 10px;  
+        left: 50%;
+        transform: translateX(-50%);
+        background: none;
+        font-size: 25px;
+        cursor: pointer;
+        color: #333;
+        z-index: 1001;
+    }
+
+
+
+    .winMsg{
+        color: black;
+        font-size: 20px;
+        z-index: 1001;
+    }
+
+    .overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        opacity: 0.44;
+        z-index: 998;
+    }

@@ -1,9 +1,12 @@
+let isXturn = true;
+let isXturnImg = true;
+let winner = null;
+
 document.addEventListener("DOMContentLoaded", function () {
 
     const boxes = this.querySelectorAll(".box");
     const turnImg = document.querySelector(".turn img");
-    let isXturn = true;
-    let isXturnImg = true;
+
 
 
 
@@ -50,17 +53,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (post1img !== null && post2img !== null && post3img !== null) {
                 if (post1img.src === post2img.src && post2img.src === post3img.src) {
-                    setTimeout(function() {alert("WINNER IS someone");},200);;
+                    winner = !isXturn ? "X" : "O";
+                    setTimeout(function () { showPopup(`WINNER IS ${winner}`); }, 200);;
                     return;
                 }
             }
-    
+
             if ([...boxes].every(box => box.querySelector("img"))) {
-                alert("It's a draw!");
+                showPopup("It's a draw!");
             }
         }
 
-        
+
 
     };
+
+
+
+    function showPopup(message) {
+        const popup = document.getElementById("popup");
+        const overlay = document.querySelector(".overlay");
+
+        popup.classList.remove("hide");
+        overlay.classList.remove("hide");
+
+
+        const popupImg = document.getElementById("popupimg");
+            if (winner == "X") {
+                popupImg.src = "Photos/X-wins.png";
+        winner = null; 
+
+
+            } else if (winner == "O") {
+
+                popupImg.src = "Photos/O-wins.png";
+        winner = null; 
+
+            } else if (winner == null){
+
+                popupImg.src = "Photos/Draw.png";
+        winner = null; 
+
+            }
+    }
+
 })
+
+
+function closeFn() {
+    document.getElementById("popup").classList.add("hide");
+    document.querySelector(".overlay").classList.add("hide");
+
+    const closeBtn = document.querySelector(".close-btn");
+
+
+        const boxes = document.querySelectorAll(".box");
+        boxes.forEach(box => {
+            box.innerHTML = "";  // This clears all child nodes inside the box, including images
+        });
+
+
+        isXturn = true;
+        isXturnImg = true;
+        turnImg.src = "Photos/Xs-turn.png";
+
+    };
+
+

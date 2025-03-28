@@ -5,6 +5,7 @@ body {
 
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -40,5 +41,19 @@ body {
     border-radius: 20px;
     font-size: 60px;
     color: #FAF9F6;
+}
+.turn {
+    position: absolute;
+    bottom: 10%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.turn>img{
+    height: 50px;
+    width: auto;
+    margin-top: 20px;
 }
 
